@@ -1,0 +1,218 @@
+2020-11-26 18:14:01,064 - BrowserLogger - INFO - === TESTING MODULE test_admin_page ====
+2020-11-26 18:14:01,064 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_admin_login_page' is starting
+2020-11-26 18:14:03,713 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:03,714 - AdminPage - INFO - Opening url https://demo.opencart.com/admin/
+2020-11-26 18:14:05,246 - AdminPage - INFO - Checking visibility of element with locator class name - panel-heading
+2020-11-26 18:14:05,322 - AdminPage - INFO - Checking visibility of element with locator id - input-username
+2020-11-26 18:14:05,388 - AdminPage - INFO - Checking visibility of element with locator id - input-password
+2020-11-26 18:14:05,435 - AdminPage - INFO - Checking visibility of element with locator css selector - button.btn.btn-primary
+2020-11-26 18:14:05,485 - AdminPage - INFO - Checking visibility of element with locator class name - help-block
+2020-11-26 18:14:05,593 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:05,593 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_admin_login_page' is finished
+
+
+2020-11-26 18:14:05,596 - BrowserLogger - INFO - === TESTING MODULE test_admin_page ====
+2020-11-26 18:14:05,596 - BrowserLogger - INFO - Test 'test_login' is starting
+2020-11-26 18:14:07,507 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:07,508 - AdminPage - INFO - Opening url https://demo.opencart.com/admin/
+2020-11-26 18:14:08,704 - AdminPage - INFO - Checking visibility of element with locator id - input-username
+2020-11-26 18:14:08,764 - AdminPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="7b3c1af619a52d0e596e6e1991f875e0", element="bd0954d6-f301-4d22-ab4a-e13af64a4c31")>
+2020-11-26 18:14:08,829 - AdminPage - INFO - Send text 'demo' to element <selenium.webdriver.remote.webelement.WebElement (session="7b3c1af619a52d0e596e6e1991f875e0", element="bd0954d6-f301-4d22-ab4a-e13af64a4c31")>
+2020-11-26 18:14:08,931 - AdminPage - INFO - Checking visibility of element with locator id - input-password
+2020-11-26 18:14:08,998 - AdminPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="7b3c1af619a52d0e596e6e1991f875e0", element="56b0951c-64d4-481d-a494-0246ed34f685")>
+2020-11-26 18:14:09,089 - AdminPage - INFO - Send text 'demo' to element <selenium.webdriver.remote.webelement.WebElement (session="7b3c1af619a52d0e596e6e1991f875e0", element="56b0951c-64d4-481d-a494-0246ed34f685")>
+2020-11-26 18:14:09,202 - AdminPage - INFO - Clicking on element with locator css selector - button.btn.btn-primary
+2020-11-26 18:14:11,520 - AdminPage - INFO - Checking title 'Dashboard' of page
+2020-11-26 18:14:11,591 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:11,592 - BrowserLogger - INFO - Test 'test_login' is finished
+
+
+2020-11-26 18:14:11,594 - BrowserLogger - INFO - === TESTING MODULE test_admin_page ====
+2020-11-26 18:14:11,594 - BrowserLogger - INFO - Test 'test_logout' is starting
+2020-11-26 18:14:13,534 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:13,535 - AdminPage - INFO - Opening url https://demo.opencart.com/admin/
+2020-11-26 18:14:15,017 - AdminPage - INFO - Checking visibility of element with locator id - input-username
+2020-11-26 18:14:15,094 - AdminPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="543c073d1f70e7b1476fd16612877808", element="d8b9ce4c-843a-4166-be36-326ee09dddaf")>
+2020-11-26 18:14:15,180 - AdminPage - INFO - Send text 'demo' to element <selenium.webdriver.remote.webelement.WebElement (session="543c073d1f70e7b1476fd16612877808", element="d8b9ce4c-843a-4166-be36-326ee09dddaf")>
+2020-11-26 18:14:15,278 - AdminPage - INFO - Checking visibility of element with locator id - input-password
+2020-11-26 18:14:15,343 - AdminPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="543c073d1f70e7b1476fd16612877808", element="107a352b-59da-4de3-8cb8-685039a00228")>
+2020-11-26 18:14:15,409 - AdminPage - INFO - Send text 'demo' to element <selenium.webdriver.remote.webelement.WebElement (session="543c073d1f70e7b1476fd16612877808", element="107a352b-59da-4de3-8cb8-685039a00228")>
+2020-11-26 18:14:15,529 - AdminPage - INFO - Clicking on element with locator css selector - button.btn.btn-primary
+2020-11-26 18:14:17,330 - AdminPage - INFO - Clicking on element with locator css selector - .nav > li:nth-child(2) > a
+2020-11-26 18:14:18,783 - AdminPage - INFO - Checking visibility of element with locator xpath - //h1[contains(text(), 'enter your login')]
+2020-11-26 18:14:18,948 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:18,948 - BrowserLogger - INFO - Test 'test_logout' is finished
+
+
+2020-11-26 18:14:18,950 - BrowserLogger - INFO - === TESTING MODULE test_admin_page ====
+2020-11-26 18:14:18,950 - BrowserLogger - INFO - Test 'test_get_products_table' is starting
+2020-11-26 18:14:20,786 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:20,787 - AdminPage - INFO - Opening url https://demo.opencart.com/admin/
+2020-11-26 18:14:22,075 - AdminPage - INFO - Checking visibility of element with locator id - input-username
+2020-11-26 18:14:22,131 - AdminPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="065100827900a132ddfcefa473f70b7c", element="164cd8ee-6179-45b1-a676-8612502e8b04")>
+2020-11-26 18:14:22,194 - AdminPage - INFO - Send text 'demo' to element <selenium.webdriver.remote.webelement.WebElement (session="065100827900a132ddfcefa473f70b7c", element="164cd8ee-6179-45b1-a676-8612502e8b04")>
+2020-11-26 18:14:22,290 - AdminPage - INFO - Checking visibility of element with locator id - input-password
+2020-11-26 18:14:22,373 - AdminPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="065100827900a132ddfcefa473f70b7c", element="2993bad5-54f5-4339-84e7-e379235884ef")>
+2020-11-26 18:14:22,453 - AdminPage - INFO - Send text 'demo' to element <selenium.webdriver.remote.webelement.WebElement (session="065100827900a132ddfcefa473f70b7c", element="2993bad5-54f5-4339-84e7-e379235884ef")>
+2020-11-26 18:14:22,574 - AdminPage - INFO - Clicking on element with locator css selector - button.btn.btn-primary
+2020-11-26 18:14:24,364 - AdminPage - INFO - Clicking on element with locator css selector - #menu-catalog > a
+2020-11-26 18:14:24,508 - AdminPage - INFO - Clicking on element with locator css selector - #collapse1 > li:nth-child(1) > a
+2020-11-26 18:14:25,457 - AdminPage - INFO - Checking visibility of element with locator css selector - .table-responsive
+2020-11-26 18:14:25,563 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:25,564 - BrowserLogger - INFO - Test 'test_get_products_table' is finished
+
+
+2020-11-26 18:14:25,567 - BrowserLogger - INFO - === TESTING MODULE test_catalogue_page ====
+2020-11-26 18:14:25,567 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_catalogue_page' is starting
+2020-11-26 18:14:27,366 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:27,367 - CataloguePage - INFO - Opening url https://demo.opencart.com/index.php?route=product/category&path=18
+2020-11-26 18:14:28,607 - CataloguePage - INFO - Checking visibility of element with locator class name - breadcrumb
+2020-11-26 18:14:28,677 - CataloguePage - INFO - Checking visibility of element with locator tag name - h2
+2020-11-26 18:14:28,744 - CataloguePage - INFO - Checking visibility of element with locator class name - img-thumbnail
+2020-11-26 18:14:28,784 - CataloguePage - INFO - Checking visibility of element with locator id - column-left
+2020-11-26 18:14:28,826 - CataloguePage - INFO - Checking visibility of element with locator id - banner0
+2020-11-26 18:14:28,928 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:28,929 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_catalogue_page' is finished
+
+
+2020-11-26 18:14:28,931 - BrowserLogger - INFO - === TESTING MODULE test_catalogue_page ====
+2020-11-26 18:14:28,931 - BrowserLogger - INFO - Test 'test_add_to_compare' is starting
+2020-11-26 18:14:30,744 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:30,745 - CataloguePage - INFO - Opening url https://demo.opencart.com/index.php?route=product/category&path=18
+2020-11-26 18:14:31,922 - CataloguePage - INFO - Checking visibility of element with locator xpath - /html/body/div[2]/div/div/div[4]/div[1]
+2020-11-26 18:14:31,973 - CataloguePage - INFO - Clicking on element with locator xpath - //button[@data-original-title="Compare this Product" and contains(@onclick, "47")]
+2020-11-26 18:14:32,156 - CataloguePage - INFO - Checking visibility of element with locator css selector - .alert-success
+2020-11-26 18:14:32,731 - CataloguePage - INFO - Checking visibility of element with locator id - compare-total
+2020-11-26 18:14:32,774 - CataloguePage - INFO - Getting text of element with locator id - compare-total
+2020-11-26 18:14:32,896 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:32,897 - BrowserLogger - INFO - Test 'test_add_to_compare' is finished
+
+
+2020-11-26 18:14:32,899 - BrowserLogger - INFO - === TESTING MODULE test_catalogue_page ====
+2020-11-26 18:14:32,899 - BrowserLogger - INFO - Test 'test_sort_by_name_a_z' is starting
+2020-11-26 18:14:34,624 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:34,625 - CataloguePage - INFO - Opening url https://demo.opencart.com/index.php?route=product/category&path=18
+2020-11-26 18:14:35,905 - CataloguePage - INFO - Finding select input by locator id - input-sort and select by text 'Name (A - Z)'
+2020-11-26 18:14:36,974 - CataloguePage - INFO - Getting text of element with locator xpath - /html/body/div[2]/div/div/div[4]/div[1]/div/div[2]/div[1]/h4/a
+2020-11-26 18:14:37,055 - CataloguePage - INFO - Getting text of element with locator xpath - /html/body/div[2]/div/div/div[4]/div[5]/div/div[2]/div[1]/h4/a
+2020-11-26 18:14:37,190 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:37,190 - BrowserLogger - INFO - Test 'test_sort_by_name_a_z' is finished
+
+
+2020-11-26 18:14:37,193 - BrowserLogger - INFO - === TESTING MODULE test_header_page ====
+2020-11-26 18:14:37,193 - BrowserLogger - INFO - Test 'test_search_result_title[phone]' is starting
+2020-11-26 18:14:39,038 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:39,040 - HeaderPage - INFO - Opening url https://demo.opencart.com/
+2020-11-26 18:14:40,814 - HeaderPage - INFO - Checking visibility of element with locator name - search
+2020-11-26 18:14:40,891 - HeaderPage - INFO - Checking visibility of element with locator css selector - .btn.btn-default.btn-lg
+2020-11-26 18:14:40,946 - HeaderPage - INFO - Checking visibility of element with locator name - search
+2020-11-26 18:14:40,993 - HeaderPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="265a61977c6709a0a288d9c599964227", element="53eb9352-eab9-4574-9c57-758a71f454c1")>
+2020-11-26 18:14:41,049 - HeaderPage - INFO - Send text 'phone' to element <selenium.webdriver.remote.webelement.WebElement (session="265a61977c6709a0a288d9c599964227", element="53eb9352-eab9-4574-9c57-758a71f454c1")>
+2020-11-26 18:14:41,134 - HeaderPage - INFO - Clicking on element with locator css selector - .btn.btn-default.btn-lg
+2020-11-26 18:14:42,339 - HeaderPage - INFO - Checking title 'Search - phone' of page
+2020-11-26 18:14:42,475 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:42,476 - BrowserLogger - INFO - Test 'test_search_result_title[phone]' is finished
+
+
+2020-11-26 18:14:42,477 - BrowserLogger - INFO - === TESTING MODULE test_header_page ====
+2020-11-26 18:14:42,477 - BrowserLogger - INFO - Test 'test_search_result_title[laptop]' is starting
+2020-11-26 18:14:44,269 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:44,270 - HeaderPage - INFO - Opening url https://demo.opencart.com/
+2020-11-26 18:14:45,644 - HeaderPage - INFO - Checking visibility of element with locator name - search
+2020-11-26 18:14:45,714 - HeaderPage - INFO - Checking visibility of element with locator css selector - .btn.btn-default.btn-lg
+2020-11-26 18:14:45,766 - HeaderPage - INFO - Checking visibility of element with locator name - search
+2020-11-26 18:14:45,799 - HeaderPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="068a17b48e75038150fcb4329fa0f6d3", element="01046667-3310-4129-adc6-4e10980336ff")>
+2020-11-26 18:14:45,859 - HeaderPage - INFO - Send text 'laptop' to element <selenium.webdriver.remote.webelement.WebElement (session="068a17b48e75038150fcb4329fa0f6d3", element="01046667-3310-4129-adc6-4e10980336ff")>
+2020-11-26 18:14:45,961 - HeaderPage - INFO - Clicking on element with locator css selector - .btn.btn-default.btn-lg
+2020-11-26 18:14:46,798 - HeaderPage - INFO - Checking title 'Search - laptop' of page
+2020-11-26 18:14:46,875 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:46,876 - BrowserLogger - INFO - Test 'test_search_result_title[laptop]' is finished
+
+
+2020-11-26 18:14:46,878 - BrowserLogger - INFO - === TESTING MODULE test_header_page ====
+2020-11-26 18:14:46,878 - BrowserLogger - INFO - Test 'test_search_result_title[HP]' is starting
+2020-11-26 18:14:48,570 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:48,571 - HeaderPage - INFO - Opening url https://demo.opencart.com/
+2020-11-26 18:14:51,640 - HeaderPage - INFO - Checking visibility of element with locator name - search
+2020-11-26 18:14:51,739 - HeaderPage - INFO - Checking visibility of element with locator css selector - .btn.btn-default.btn-lg
+2020-11-26 18:14:51,825 - HeaderPage - INFO - Checking visibility of element with locator name - search
+2020-11-26 18:14:51,888 - HeaderPage - INFO - Clearing input of element <selenium.webdriver.remote.webelement.WebElement (session="5cfb6543da6b5e5441574aac2a849078", element="fb56e747-3000-41a9-a144-43bbf98f84c2")>
+2020-11-26 18:14:51,968 - HeaderPage - INFO - Send text 'HP' to element <selenium.webdriver.remote.webelement.WebElement (session="5cfb6543da6b5e5441574aac2a849078", element="fb56e747-3000-41a9-a144-43bbf98f84c2")>
+2020-11-26 18:14:52,127 - HeaderPage - INFO - Clicking on element with locator css selector - .btn.btn-default.btn-lg
+2020-11-26 18:14:53,168 - HeaderPage - INFO - Checking title 'Search - HP' of page
+2020-11-26 18:14:53,248 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:53,249 - BrowserLogger - INFO - Test 'test_search_result_title[HP]' is finished
+
+
+2020-11-26 18:14:53,251 - BrowserLogger - INFO - === TESTING MODULE test_login_page ====
+2020-11-26 18:14:53,251 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_login_page' is starting
+2020-11-26 18:14:55,378 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:55,380 - LoginPage - INFO - Opening url https://demo.opencart.com/index.php?route=account/login
+2020-11-26 18:14:56,619 - LoginPage - INFO - Checking visibility of element with locator css selector - #content > .row > .col-sm-6:first-child >.well
+2020-11-26 18:14:56,787 - LoginPage - INFO - Checking visibility of element with locator css selector - #content > .row > .col-sm-6:last-child >.well
+2020-11-26 18:14:56,869 - LoginPage - INFO - Checking visibility of element with locator class name - list-group
+2020-11-26 18:14:56,944 - LoginPage - INFO - Checking visibility of element with locator css selector - a.btn.btn-primary
+2020-11-26 18:14:56,996 - LoginPage - INFO - Checking visibility of element with locator css selector - input.btn.btn-primary
+2020-11-26 18:14:57,118 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:14:57,118 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_login_page' is finished
+
+
+2020-11-26 18:14:57,121 - BrowserLogger - INFO - === TESTING MODULE test_main_page ====
+2020-11-26 18:14:57,121 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_main_page' is starting
+2020-11-26 18:14:58,961 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:14:58,962 - MainPage - INFO - Opening url https://demo.opencart.com/
+2020-11-26 18:15:00,228 - MainPage - INFO - Checking visibility of element with locator css selector - #content .swiper-viewport:nth-child(1)
+2020-11-26 18:15:00,302 - MainPage - INFO - Checking visibility of element with locator css selector - .swiper-pagination.slideshow0.swiper-pagination-clickable.swiper-pagination-bullets
+2020-11-26 18:15:00,373 - MainPage - INFO - Checking visibility of element with locator tag name - h3
+2020-11-26 18:15:00,427 - MainPage - INFO - Checking visibility of element with locator css selector - #carousel0.swiper-container-horizontal
+2020-11-26 18:15:00,483 - MainPage - INFO - Checking visibility of element with locator css selector - .swiper-pagination.carousel0.swiper-pagination-clickable.swiper-pagination-bullets
+2020-11-26 18:15:00,586 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:15:00,586 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_main_page' is finished
+
+
+2020-11-26 18:15:00,588 - BrowserLogger - INFO - === TESTING MODULE test_main_page ====
+2020-11-26 18:15:00,588 - BrowserLogger - INFO - Test 'test_is_main_page' is starting
+2020-11-26 18:15:02,673 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:15:02,675 - MainPage - INFO - Opening url https://demo.opencart.com/
+2020-11-26 18:15:06,091 - MainPage - INFO - Checking title 'Your Store' of page
+2020-11-26 18:15:06,171 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:15:06,172 - BrowserLogger - INFO - Test 'test_is_main_page' is finished
+
+
+2020-11-26 18:15:06,175 - BrowserLogger - INFO - === TESTING MODULE test_product_page ====
+2020-11-26 18:15:06,175 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_product_page' is starting
+2020-11-26 18:15:07,883 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:15:07,884 - ProductPage - INFO - Opening url https://demo.opencart.com/index.php?route=product/product&path=18&product_id=47
+2020-11-26 18:15:10,643 - ProductPage - INFO - Checking visibility of element with locator css selector - .btn-group + h1
+2020-11-26 18:15:10,792 - ProductPage - INFO - Checking visibility of element with locator id - button-cart
+2020-11-26 18:15:10,864 - ProductPage - INFO - Checking visibility of element with locator class name - thumbnails
+2020-11-26 18:15:10,910 - ProductPage - INFO - Checking visibility of element with locator class name - rating
+2020-11-26 18:15:10,955 - ProductPage - INFO - Checking visibility of element with locator css selector - #tab-description > p
+2020-11-26 18:15:11,063 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:15:11,063 - BrowserLogger - INFO - Test 'test_presence_of_elements_on_product_page' is finished
+
+
+2020-11-26 18:15:11,065 - BrowserLogger - INFO - === TESTING MODULE test_product_page ====
+2020-11-26 18:15:11,065 - BrowserLogger - INFO - Test 'test_open_image_in_window_by_click' is starting
+2020-11-26 18:15:12,817 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:15:12,818 - ProductPage - INFO - Opening url https://demo.opencart.com/index.php?route=product/product&path=18&product_id=47
+2020-11-26 18:15:15,275 - ProductPage - INFO - Clicking on element with locator xpath - //ul[@class="thumbnails"]/li[1]
+2020-11-26 18:15:15,616 - ProductPage - INFO - Checking visibility of element with locator css selector - .mfp-figure
+2020-11-26 18:15:16,277 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:15:16,278 - BrowserLogger - INFO - Test 'test_open_image_in_window_by_click' is finished
+
+
+2020-11-26 18:15:16,280 - BrowserLogger - INFO - === TESTING MODULE test_product_page ====
+2020-11-26 18:15:16,280 - BrowserLogger - INFO - Test 'test_click_on_tabs' is starting
+2020-11-26 18:15:18,059 - BrowserLogger - INFO - Browser MicrosoftEdge run
+2020-11-26 18:15:18,061 - ProductPage - INFO - Opening url https://demo.opencart.com/index.php?route=product/product&path=18&product_id=47
+2020-11-26 18:15:20,549 - ProductPage - INFO - Clicking on element with locator xpath - //a[@href="#tab-specification"]
+2020-11-26 18:15:20,872 - ProductPage - INFO - Finding input by locator xpath - //ul[@class="nav nav-tabs"]/li[2] and getting attribute 'class'
+2020-11-26 18:15:20,947 - ProductPage - INFO - Clicking on element with locator xpath - //a[@href="#tab-review"]
+2020-11-26 18:15:21,063 - ProductPage - INFO - Finding input by locator xpath - //ul[@class="nav nav-tabs"]/li[3] and getting attribute 'class'
+2020-11-26 18:15:21,123 - ProductPage - INFO - Clicking on element with locator xpath - //a[@href="#tab-description"]
+2020-11-26 18:15:21,232 - ProductPage - INFO - Finding input by locator xpath - //ul[@class="nav nav-tabs"]/li[1] and getting attribute 'class'
+2020-11-26 18:15:21,359 - BrowserLogger - INFO - Browser MicrosoftEdge closed
+2020-11-26 18:15:21,359 - BrowserLogger - INFO - Test 'test_click_on_tabs' is finished
+
+
