@@ -15,4 +15,4 @@ def test_get_todos(session, base_url, fixture_get_todos):
 
 def test_get_todo(session, base_url):
     res = session.get(url=f'{base_url}/1')
-    validate_schema(res.json(), "schemas/todo_schema.json")
+    validate_schema(res.json(), "lesson4/schemas/todo_schema.json")
