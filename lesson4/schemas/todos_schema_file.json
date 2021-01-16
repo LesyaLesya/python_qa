@@ -1,4 +1,4 @@
 {
   "type": "array",
-  "items": {"$ref": "file:schemas/todo_schema.json"}
+  "items": {"$ref": "file:lesson4/schemas/todo_schema.json"}
 }
