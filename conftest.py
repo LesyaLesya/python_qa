@@ -36,7 +36,7 @@ def browser(request):
         print("\nstart chrome browser for test..")
         options = webdriver.chrome.options.Options()
         options.headless = True
-        browser = webdriver.Chrome(options=options)
+        browser = webdriver.Chrome(options=options, executable_path="Open_cart_docker_allure/chromedriver")
         browser.maximize_window()
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
