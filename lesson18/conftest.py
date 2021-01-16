@@ -50,12 +50,12 @@ def pytest_addoption(parser):
     parser.addoption(
         "--browserVersion",
         action="store",
-        required=True,
+        default="87.0",
         help="Enter browser version")
     parser.addoption(
         "--vnc",
         action="store_true",
-        default=False,
+        default=True,
         help="Choose True or False for option")
     parser.addoption(
         "--logs",
@@ -65,7 +65,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--videos",
         action="store_true",
-        default=False,
+        default=True,
         help="Choose True or False for option")
 
 
