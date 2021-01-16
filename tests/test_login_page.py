@@ -1,4 +1,4 @@
-from lesson28.pages.login_page import LoginPage
+from Open_cart_docker_allure.pages.login_page import LoginPage
 import allure
 
 
