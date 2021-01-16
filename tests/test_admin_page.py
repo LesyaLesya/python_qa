@@ -1,4 +1,4 @@
-from pages.admin_page import AdminPage
+from Open_cart_docker_allure.pages.admin_page import AdminPage
 import allure
 
 
