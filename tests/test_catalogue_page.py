@@ -1,4 +1,4 @@
-from lesson28.pages.catalogue_page import CataloguePage
+from Open_cart_docker_allure.pages.catalogue_page import CataloguePage
 import allure
 
 
