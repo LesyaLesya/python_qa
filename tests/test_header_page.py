@@ -1,5 +1,5 @@
 import pytest
-from lesson28.pages.header_page import HeaderPage
+from Open_cart_docker_allure.pages.header_page import HeaderPage
 import allure
 
 
