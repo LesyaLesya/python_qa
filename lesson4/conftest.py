@@ -59,6 +59,6 @@ def fixture_test_filtering_positive_by_title(request):
     return request.param
 
 
-@pytest.fixture(params=["schemas/todos_schema.json", "schemas/todos_schema_file.json"])
+@pytest.fixture(params=["lesson4/schemas/todos_schema.json", "lesson4/schemas/todos_schema_file.json"])
 def fixture_get_todos(request):
     return request.param
