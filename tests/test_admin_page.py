@@ -1,4 +1,4 @@
-from lesson28.pages.admin_page import AdminPage
+from pages.admin_page import AdminPage
 import allure
 
 
