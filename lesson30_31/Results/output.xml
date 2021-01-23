@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on darwin)" generated="20210124 01:17:49.444" rpa="false">
+<suite id="s1" name="Tests" source="/Users/lesya/PycharmProjects/pythonqa/lesson30_31/Tests">
+<suite id="s1-s1" name="TestApi" source="/Users/lesya/PycharmProjects/pythonqa/lesson30_31/Tests/TestApi.robot">
+<test id="s1-s1-t1" name="Test Get Resource Positive">
+<kw name="Get Resource">
+<arguments>
+<arg>1</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:49.713" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:49.712" endtime="20210124 01:17:49.713"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:49.949" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/1 
+ path_url=/todos/1 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:49.949" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/1 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=d2dea662e7221e53225eeca55994e10d51611440269; expires=Mon, 22-Feb-21 22:17:49 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'x-powered-by': 'Express', 'x-ratelimit-limit': '1000', 'x-ratelimit-remaining': '999', 'x-ratelimit-reset': '1610729666', 'vary': 'Origin, Accept-Encoding', 'access-control-allow-credentials': 'true', 'cache-control': 'max-age=43200', 'pragma': 'no-cache', 'expires': '-1', 'x-content-type-options': 'nosniff', 'etag': 'W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"', 'via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '19385', 'cf-request-id': '07d2ec425c00002c19b9355000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"group":"cf-nel","endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=YgdUw%2F3JvUchnuH%2Bse47Cs6RhqXPcSQLuXCn3LbCWrIkmBtjGz070I9ejozWIcGVXkLWeV2d1%2F638BOREU0edJMN53dufUa04MFQoygI%2BbRT2kP%2Bw0tmRiUcxKxN"}],"max_age":604800}', 'NEL': '{"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '6164e316fb262c19-FRA', 'Content-Encoding': 'gzip'} 
+ body={
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+} 
+ </msg>
+<msg timestamp="20210124 01:17:49.950" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:49.714" endtime="20210124 01:17:49.950"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:49.951" endtime="20210124 01:17:49.952"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:49.711" endtime="20210124 01:17:49.952"></status>
+</kw>
+<kw name="Get Resource">
+<arguments>
+<arg>100</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:49.955" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:49.954" endtime="20210124 01:17:49.955"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:50.146" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/100 
+ path_url=/todos/100 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:50.146" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/100 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=d7d3e6e5ef87eef2a9d8efcb21719b7761611440270; expires=Mon, 22-Feb-21 22:17:50 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1611418002', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"72-VEuQwCO8m0nlpyrH67Q23msr3DI"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '22306', 'cf-request-id': '07d2ec43130000d6b53b072000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=UgAkVInXic27svqLE11CmJ0qfmgoO%2FpJkJqx%2FLix%2BTM2nyBYeAfDBsr6eXR4KH66zufGeIJxPH3hE40vyA%2Buc66kq3ZoR%2ByZPPk4%2FZgEAnL%2FOBfTSGE33G6fjAOj"}]}', 'NEL': '{"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '6164e3181d79d6b5-FRA', 'Content-Encoding': 'gzip'} 
+ body={
+  "userId": 5,
+  "id": 100,
+  "title": "excepturi a et neque qui expedita vel voluptate",
+  "completed": false
+} 
+ </msg>
+<msg timestamp="20210124 01:17:50.146" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:49.956" endtime="20210124 01:17:50.146"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:50.148" endtime="20210124 01:17:50.148"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:49.953" endtime="20210124 01:17:50.149"></status>
+</kw>
+<kw name="Get Resource">
+<arguments>
+<arg>200</arg>
+<arg>200</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:50.151" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:50.150" endtime="20210124 01:17:50.152"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:50.329" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/200 
+ path_url=/todos/200 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:50.329" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/200 
+ status=200, reason=OK 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=db1ec558d3788085819ca7dd0e1d1f5051611440270; expires=Mon, 22-Feb-21 22:17:50 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1611424603', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"60-iFJLAd3aYmsb0zI9mkLMnsCCUsg"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '15692', 'cf-request-id': '07d2ec43d500006341ff268000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=WBasTUPZOC13Xw0yTS5tRUy5YD5zeF0K6thjpHceq%2Fy2uoBrsn4ONkB9kdKWsPRhEASqXRQ8kvidOBQ09FZdol7KeZvJIwBXHwLDdqNDshh2JcZ%2FCeRTPk8vLL1w"}]}', 'NEL': '{"max_age":604800,"report_to":"cf-nel"}', 'Server': 'cloudflare', 'CF-RAY': '6164e31958596341-FRA', 'Content-Encoding': 'gzip'} 
+ body={
+  "userId": 10,
+  "id": 200,
+  "title": "ipsam aperiam voluptates qui",
+  "completed": false
+} 
+ </msg>
+<msg timestamp="20210124 01:17:50.330" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:50.152" endtime="20210124 01:17:50.330"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:50.331" endtime="20210124 01:17:50.331"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:50.149" endtime="20210124 01:17:50.332"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:49.710" endtime="20210124 01:17:50.333" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Test Get Resource Negative">
+<kw name="Get Resource">
+<arguments>
+<arg>-1</arg>
+<arg>404</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:50.340" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:50.339" endtime="20210124 01:17:50.341"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:50.521" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/-1 
+ path_url=/todos/-1 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:50.521" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/-1 
+ status=404, reason=Not Found 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=db05e1771a2ee25493221c0dfbf9afff71611440270; expires=Mon, 22-Feb-21 22:17:50 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1611438895', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '1404', 'cf-request-id': '07d2ec44940000d6ed8a82e000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"max_age":604800,"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=8zQAQDg7NRkxx8BbFRxTlGc2lHZfZKpvvHLbRqlx0HhaW05Blzbv5pNYdD3%2F6MTpkqBNqLqqMRMtkiRP40IsA4NDs%2BGuChLO2ZygsjwZ8l8tZhZH%2BzCdCcCdZuRV"}],"group":"cf-nel"}', 'NEL': '{"max_age":604800,"report_to":"cf-nel"}', 'Server': 'cloudflare', 'CF-RAY': '6164e31a8880d6ed-FRA'} 
+ body={} 
+ </msg>
+<msg timestamp="20210124 01:17:50.521" level="INFO">${resp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:50.342" endtime="20210124 01:17:50.521"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:50.523" endtime="20210124 01:17:50.523"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:50.338" endtime="20210124 01:17:50.524"></status>
+</kw>
+<kw name="Get Resource">
+<arguments>
+<arg>0</arg>
+<arg>404</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:50.526" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:50.525" endtime="20210124 01:17:50.526"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:50.714" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/0 
+ path_url=/todos/0 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:50.714" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/0 
+ status=404, reason=Not Found 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=dfce3e43b424367601fbbfe55f09c39b61611440270; expires=Mon, 22-Feb-21 22:17:50 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1611438895', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '1403', 'cf-request-id': '07d2ec455200002bd20f94b000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"group":"cf-nel","endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=ZQxHUSjiRU%2BCKPxFZvBjBo%2FYl%2BZ1BR0SW3MASdJ0XRHxQNPNf0a1xy241wlev3Kxgs9DvTx%2FMcF92nGX9bzH1WUJ2ukx9gLJ9y7IkYQupBVC7lv359O52b6eoSwr"}],"max_age":604800}', 'NEL': '{"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '6164e31bbd1c2bd2-FRA'} 
+ body={} 
+ </msg>
+<msg timestamp="20210124 01:17:50.714" level="INFO">${resp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:50.527" endtime="20210124 01:17:50.714"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:50.716" endtime="20210124 01:17:50.716"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:50.524" endtime="20210124 01:17:50.717"></status>
+</kw>
+<kw name="Get Resource">
+<arguments>
+<arg>201</arg>
+<arg>404</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:50.719" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:50.718" endtime="20210124 01:17:50.719"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:50.908" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/201 
+ path_url=/todos/201 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:50.909" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/201 
+ status=404, reason=Not Found 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=d90e3c757c377395d1c9748bc3d6b48121611440270; expires=Mon, 22-Feb-21 22:17:50 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1611433375', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '6955', 'cf-request-id': '07d2ec46100000314014939000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"group":"cf-nel","endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=Nv67C4HqEVhn8TqjaqcoGh1lrDyOcoAmgwyBsfwCDBUpnaWv044sVctqZCFw0nOmWyPXj7mcgaLDJjcavghvFQnAFZt5t5WvOCKPlD4A%2BlWD1thlH6BlQztWmJHm"}],"max_age":604800}', 'NEL': '{"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '6164e31ceddc3140-FRA'} 
+ body={} 
+ </msg>
+<msg timestamp="20210124 01:17:50.909" level="INFO">${resp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:50.720" endtime="20210124 01:17:50.909"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:50.910" endtime="20210124 01:17:50.911"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:50.717" endtime="20210124 01:17:50.911"></status>
+</kw>
+<kw name="Get Resource">
+<arguments>
+<arg>None</arg>
+<arg>404</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:50.913" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:50.913" endtime="20210124 01:17:50.914"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:51.090" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/None 
+ path_url=/todos/None 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:51.090" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/None 
+ status=404, reason=Not Found 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=dfd4adf966be8c63222035113d935e2fe1611440271; expires=Mon, 22-Feb-21 22:17:51 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1611438895', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '1404', 'cf-request-id': '07d2ec46d100002b3599aec000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=5NjEjMOIGg%2Bw3nmjoheJDZQN5y6XyepJm8Me5PLCus5x%2Bu3loh2g9qMN5Pgq3eQPBNFN5BBqnj%2Ft6MEgHQ%2FvJ8ZNBo2tI6XY5wb9EX5hN0qV59tEpTHuYTSlwOt0"}]}', 'NEL': '{"max_age":604800,"report_to":"cf-nel"}', 'Server': 'cloudflare', 'CF-RAY': '6164e31e1b0f2b35-FRA'} 
+ body={} 
+ </msg>
+<msg timestamp="20210124 01:17:51.090" level="INFO">${resp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:50.915" endtime="20210124 01:17:51.091"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:51.092" endtime="20210124 01:17:51.092"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:50.912" endtime="20210124 01:17:51.093"></status>
+</kw>
+<kw name="Get Resource">
+<arguments>
+<arg>string</arg>
+<arg>404</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>url=${API_URL}</arg>
+<arg>disable_warnings=1</arg>
+</arguments>
+<msg timestamp="20210124 01:17:51.095" level="INFO">Creating Session using : alias=api_test, url=https://jsonplaceholder.typicode.com/todos, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210124 01:17:51.094" endtime="20210124 01:17:51.096"></status>
+</kw>
+<kw name="Get On Session" library="RequestsLibrary">
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<arguments>
+<arg>api_test</arg>
+<arg>/${todo_id}</arg>
+<arg>expected_status=${status}</arg>
+</arguments>
+<assign>
+<var>${resp}</var>
+</assign>
+<msg timestamp="20210124 01:17:51.284" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/string 
+ path_url=/todos/string 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20210124 01:17:51.284" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/string 
+ status=404, reason=Not Found 
+ headers={'Date': 'Sat, 23 Jan 2021 22:17:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Set-Cookie': '__cfduid=d66474f0afdc7be1891138fc2bf629ab91611440271; expires=Mon, 22-Feb-21 22:17:51 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '996', 'X-Ratelimit-Reset': '1611438895', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '1403', 'cf-request-id': '07d2ec479200001f51adaa8000000001', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"group":"cf-nel","endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report?s=zLvCScZ9My7V7xlNClNwsCBuTSRl%2FbNbI%2Bk6iWl%2BODm2MXmwmQ%2FAMnhapiLVgrEtWa90QlxHVGTUCk%2BdiQFj5X44GMalVY1%2FHhYj6fzy8RAfwaLrjKCGfwIUa2dS"}],"max_age":604800}', 'NEL': '{"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '6164e31f48271f51-FRA'} 
+ body={} 
+ </msg>
+<msg timestamp="20210124 01:17:51.284" level="INFO">${resp} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20210124 01:17:51.097" endtime="20210124 01:17:51.285"></status>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<doc>Fails if response status code is different than the expected.</doc>
+<arguments>
+<arg>${status}</arg>
+<arg>${resp}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:51.286" endtime="20210124 01:17:51.286"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:51.094" endtime="20210124 01:17:51.287"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:50.337" endtime="20210124 01:17:51.288" critical="yes"></status>
+</test>
+<doc>API Тесты</doc>
+<status status="PASS" starttime="20210124 01:17:49.575" endtime="20210124 01:17:51.292"></status>
+</suite>
+<suite id="s1-s2" name="TestDataBase" source="/Users/lesya/PycharmProjects/pythonqa/lesson30_31/Tests/TestDataBase.robot">
+<kw name="Connect To Database" library="DatabaseLibrary" type="setup">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:51.570" level="INFO">Connecting using : pymysql.connect(db=bitnami_opencart, user=bn_opencart, passwd=, host=127.0.0.1, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20210124 01:17:51.513" endtime="20210124 01:17:51.598"></status>
+</kw>
+<test id="s1-s2-t1" name="Add User To Db">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>url=None</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>remote_url=http://${REMOTE_EXECUTOR}:4444/wd/hub</arg>
+</arguments>
+<msg timestamp="20210124 01:17:51.602" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" starttime="20210124 01:17:51.601" endtime="20210124 01:17:53.377"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:53.379" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:17:53.379" endtime="20210124 01:17:54.111"></status>
+</kw>
+<kw name="Go To Register Form" library="AdminPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ACCOUNT_ICON}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:54.113" endtime="20210124 01:17:54.170"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ACCOUNT_ICON}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:54.171" level="INFO">Clicking element 'css=.fa.fa-user'.</msg>
+<status status="PASS" starttime="20210124 01:17:54.170" endtime="20210124 01:17:54.268"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${REGISTER_LINK}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:54.269" level="INFO">Clicking element 'xpath=//a[contains(@href, "register")]'.</msg>
+<status status="PASS" starttime="20210124 01:17:54.269" endtime="20210124 01:17:54.685"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${REGISTER_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:54.686" endtime="20210124 01:17:54.733"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:54.113" endtime="20210124 01:17:54.733"></status>
+</kw>
+<kw name="Register New User" library="AdminPage">
+<arguments>
+<arg>${USER_DATA}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${FIRST_NAME_INPUT}</arg>
+<arg>${user_data}[0]</arg>
+</arguments>
+<msg timestamp="20210124 01:17:54.736" level="INFO">Typing text 'Alena' into text field 'id=input-firstname'.</msg>
+<status status="PASS" starttime="20210124 01:17:54.735" endtime="20210124 01:17:54.917"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LAST_NAME_INPUT}</arg>
+<arg>${user_data}[1]</arg>
+</arguments>
+<msg timestamp="20210124 01:17:54.919" level="INFO">Typing text 'TEST' into text field 'id=input-lastname'.</msg>
+<status status="PASS" starttime="20210124 01:17:54.918" endtime="20210124 01:17:55.106"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${user_data}[2]</arg>
+</arguments>
+<msg timestamp="20210124 01:17:55.109" level="INFO">Typing text 'test111@test111.ru' into text field 'id=input-email'.</msg>
+<status status="PASS" starttime="20210124 01:17:55.108" endtime="20210124 01:17:55.308"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TEL_INPUT}</arg>
+<arg>${user_data}[3]</arg>
+</arguments>
+<msg timestamp="20210124 01:17:55.311" level="INFO">Typing text '12345677' into text field 'id=input-telephone'.</msg>
+<status status="PASS" starttime="20210124 01:17:55.310" endtime="20210124 01:17:55.481"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_REGISTER}</arg>
+<arg>${user_data}[4]</arg>
+</arguments>
+<msg timestamp="20210124 01:17:55.483" level="INFO">Typing text 'qwe123!' into text field 'id=input-password'.</msg>
+<status status="PASS" starttime="20210124 01:17:55.483" endtime="20210124 01:17:55.663"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_CONFIRM_REGISTER}</arg>
+<arg>${user_data}[4]</arg>
+</arguments>
+<msg timestamp="20210124 01:17:55.666" level="INFO">Typing text 'qwe123!' into text field 'id=input-confirm'.</msg>
+<status status="PASS" starttime="20210124 01:17:55.665" endtime="20210124 01:17:55.853"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${AGREE_CHECKBOX}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:55.855" level="INFO">Clicking element 'xpath=//input[@name="agree"]'.</msg>
+<status status="PASS" starttime="20210124 01:17:55.854" endtime="20210124 01:17:55.970"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTINUE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:55.971" level="INFO">Clicking element 'css=.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20210124 01:17:55.971" endtime="20210124 01:17:56.387"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SUCCESS_REGISTER_HEADER}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:56.389" endtime="20210124 01:17:56.437"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUCCESS_REGISTER_HEADER}</arg>
+</arguments>
+<assign>
+<var>${SUCCESS_HEADER}</var>
+</assign>
+<msg timestamp="20210124 01:17:56.477" level="INFO">${SUCCESS_HEADER} = Your Account Has Been Created!</msg>
+<status status="PASS" starttime="20210124 01:17:56.437" endtime="20210124 01:17:56.477"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${SUCCESS_HEADER}</arg>
+<arg>Your Account Has Been Created!</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:56.479" endtime="20210124 01:17:56.480"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:54.734" endtime="20210124 01:17:56.481"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>3 sec</arg>
+<arg>1 sec</arg>
+<arg>Check User In Database</arg>
+<arg>${USER_DATA}</arg>
+</arguments>
+<kw name="Check User In Database" library="DataBase">
+<arguments>
+<arg>${USER_DATA}</arg>
+</arguments>
+<kw name="Check If Exists In Database" library="DatabaseLibrary">
+<doc>Check if any row would be returned by given the input `selectStatement`. If there are no results, then this will
+throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit transaction
+commit or rollback.</doc>
+<arguments>
+<arg>select * from ${CUSTOMER_DB} where firstname = '${value}[0]' and lastname = '${value}[1]'</arg>
+</arguments>
+<msg timestamp="20210124 01:17:56.484" level="INFO">Executing : Check If Exists In Database  |  select * from oc_customer where firstname = 'Alena' and lastname = 'TEST' </msg>
+<msg timestamp="20210124 01:17:56.484" level="INFO">Executing : Query  |  select * from oc_customer where firstname = 'Alena' and lastname = 'TEST' </msg>
+<status status="PASS" starttime="20210124 01:17:56.483" endtime="20210124 01:17:56.489"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:56.482" endtime="20210124 01:17:56.491"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:56.482" endtime="20210124 01:17:56.491"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Execute Sql String</arg>
+<arg>delete from ${CUSTOMER_DB} where firstname = '${USER_DATA}[0]' and lastname = '${USER_DATA}[1]'</arg>
+<arg>AND</arg>
+<arg>Close Browser</arg>
+</arguments>
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<arguments>
+<arg>delete from ${CUSTOMER_DB} where firstname = '${USER_DATA}[0]' and lastname = '${USER_DATA}[1]'</arg>
+</arguments>
+<msg timestamp="20210124 01:17:56.493" level="INFO">Executing : Execute SQL String  |  delete from oc_customer where firstname = 'Alena' and lastname = 'TEST' </msg>
+<status status="PASS" starttime="20210124 01:17:56.492" endtime="20210124 01:17:56.497"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210124 01:17:56.498" endtime="20210124 01:17:56.556"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:56.491" endtime="20210124 01:17:56.557"></status>
+</kw>
+<doc>Регистрация нового пользователя с проверкой его добавления в БД</doc>
+<status status="PASS" starttime="20210124 01:17:51.600" endtime="20210124 01:17:56.558" critical="yes"></status>
+</test>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="teardown">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20210124 01:17:56.567" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20210124 01:17:56.566" endtime="20210124 01:17:56.567"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:51.301" endtime="20210124 01:17:56.568"></status>
+</suite>
+<suite id="s1-s3" name="TestOpenCart" source="/Users/lesya/PycharmProjects/pythonqa/lesson30_31/Tests/TestOpenCart.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="setup">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>url=None</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>remote_url=http://${REMOTE_EXECUTOR}:4444/wd/hub</arg>
+</arguments>
+<msg timestamp="20210124 01:17:56.596" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" starttime="20210124 01:17:56.595" endtime="20210124 01:17:58.203"></status>
+</kw>
+<test id="s1-s3-t1" name="Test Visibility Of Elements On Main Page">
+<kw name="Search for elements on main page">
+<arguments>
+<arg>${BANNER}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:58.207" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:17:58.207" endtime="20210124 01:17:58.939"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:58.940" endtime="20210124 01:17:58.996"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:58.206" endtime="20210124 01:17:58.996"></status>
+</kw>
+<kw name="Search for elements on main page">
+<arguments>
+<arg>${BANNER_PAGINATION_BULLETS}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:58.998" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:17:58.998" endtime="20210124 01:17:59.346"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:59.347" endtime="20210124 01:17:59.405"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:58.997" endtime="20210124 01:17:59.405"></status>
+</kw>
+<kw name="Search for elements on main page">
+<arguments>
+<arg>${HEADER_FEATURED}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:59.407" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:17:59.407" endtime="20210124 01:17:59.734"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:17:59.735" endtime="20210124 01:17:59.779"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:59.406" endtime="20210124 01:17:59.780"></status>
+</kw>
+<kw name="Search for elements on main page">
+<arguments>
+<arg>${CAROUSEL_BRAND}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:17:59.782" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:17:59.782" endtime="20210124 01:18:00.098"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:00.099" endtime="20210124 01:18:00.146"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:59.781" endtime="20210124 01:18:00.147"></status>
+</kw>
+<kw name="Search for elements on main page">
+<arguments>
+<arg>${CAROUSEL_PAGINATION_BULLETS}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:18:00.149" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:18:00.149" endtime="20210124 01:18:00.513"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:00.515" endtime="20210124 01:18:00.562"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:00.148" endtime="20210124 01:18:00.563"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:17:58.204" endtime="20210124 01:18:00.564" critical="yes"></status>
+</test>
+<test id="s1-s3-t2" name="Test Get Title Of Main Page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}</arg>
+</arguments>
+<msg timestamp="20210124 01:18:00.573" level="INFO">Opening url 'http://192.168.17.4'</msg>
+<status status="PASS" starttime="20210124 01:18:00.573" endtime="20210124 01:18:00.882"></status>
+</kw>
+<kw name="Get title of page" library="MainPage">
+<arguments>
+<arg>Your Store</arg>
+</arguments>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${TITLE}</var>
+</assign>
+<msg timestamp="20210124 01:18:00.896" level="INFO">${TITLE} = Your Store</msg>
+<status status="PASS" starttime="20210124 01:18:00.884" endtime="20210124 01:18:00.896"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${TITLE}</arg>
+<arg>${value}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:00.898" endtime="20210124 01:18:00.899"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:00.883" endtime="20210124 01:18:00.900"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:00.572" endtime="20210124 01:18:00.901" critical="yes"></status>
+</test>
+<test id="s1-s3-t3" name="Test Visibility Of Elements On Product Page">
+<kw name="Search for elements on product page">
+<arguments>
+<arg>${PRODUCT_HEADER}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:00.909" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:00.909" endtime="20210124 01:18:02.727"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:02.729" endtime="20210124 01:18:02.848"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:00.908" endtime="20210124 01:18:02.849"></status>
+</kw>
+<kw name="Search for elements on product page">
+<arguments>
+<arg>${BUTTON_CART}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:02.852" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:02.851" endtime="20210124 01:18:03.663"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:03.665" endtime="20210124 01:18:03.720"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:02.850" endtime="20210124 01:18:03.721"></status>
+</kw>
+<kw name="Search for elements on product page">
+<arguments>
+<arg>${IMAGES_BLOCK}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:03.723" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:03.722" endtime="20210124 01:18:04.527"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:04.528" endtime="20210124 01:18:04.604"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:03.721" endtime="20210124 01:18:04.605"></status>
+</kw>
+<kw name="Search for elements on product page">
+<arguments>
+<arg>${RATING_BLOCK}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:04.607" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:04.606" endtime="20210124 01:18:05.567"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:05.569" endtime="20210124 01:18:05.693"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:04.605" endtime="20210124 01:18:05.694"></status>
+</kw>
+<kw name="Search for elements on product page">
+<arguments>
+<arg>${PRODUCT_DESCRIPTION}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:05.697" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:05.695" endtime="20210124 01:18:06.625"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:06.626" endtime="20210124 01:18:06.700"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:05.694" endtime="20210124 01:18:06.700"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:00.906" endtime="20210124 01:18:06.701" critical="yes"></status>
+</test>
+<test id="s1-s3-t4" name="Test Open Product Image In Window By Click">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:06.709" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:06.709" endtime="20210124 01:18:07.510"></status>
+</kw>
+<kw name="Check click on image" library="ProductPage">
+<arguments>
+<arg>${MAIN_PRODUCT_IMAGE}</arg>
+<arg>${PRODUCT_IMAGE_IN_WINDOW}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector1}</arg>
+</arguments>
+<msg timestamp="20210124 01:18:07.514" level="INFO">Clicking element 'xpath=//ul[@class="thumbnails"]/li[1]'.</msg>
+<status status="PASS" starttime="20210124 01:18:07.514" endtime="20210124 01:18:07.749"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector2}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:07.751" endtime="20210124 01:18:07.854"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:07.512" endtime="20210124 01:18:07.855"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:06.708" endtime="20210124 01:18:07.856" critical="yes"></status>
+</test>
+<test id="s1-s3-t5" name="Test Click On Tabs In Product cart">
+<kw name="Click On Tabs">
+<arguments>
+<arg>${TAB_SPECIFICATION_LINK}</arg>
+<arg>${TAB_SPECIFICATION_CLASS}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:07.866" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:07.866" endtime="20210124 01:18:08.576"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector1}</arg>
+</arguments>
+<msg timestamp="20210124 01:18:08.578" level="INFO">Clicking element 'xpath=//a[@href="#tab-specification"]'.</msg>
+<status status="PASS" starttime="20210124 01:18:08.577" endtime="20210124 01:18:08.829"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector2}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:08.830" endtime="20210124 01:18:08.874"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${selector2}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${ATTR}</var>
+</assign>
+<msg timestamp="20210124 01:18:08.919" level="INFO">${ATTR} = active</msg>
+<status status="PASS" starttime="20210124 01:18:08.874" endtime="20210124 01:18:08.919"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${ATTR}</arg>
+<arg>active</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:08.920" endtime="20210124 01:18:08.921"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:07.864" endtime="20210124 01:18:08.922"></status>
+</kw>
+<kw name="Click On Tabs">
+<arguments>
+<arg>${TAB_DESCRIPTION_LINK}</arg>
+<arg>${TAB_DESCRIPTION_CLASS}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:08.925" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:08.924" endtime="20210124 01:18:09.678"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector1}</arg>
+</arguments>
+<msg timestamp="20210124 01:18:09.681" level="INFO">Clicking element 'xpath=//a[@href="#tab-description"]'.</msg>
+<status status="PASS" starttime="20210124 01:18:09.681" endtime="20210124 01:18:09.993"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector2}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:09.994" endtime="20210124 01:18:10.056"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${selector2}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${ATTR}</var>
+</assign>
+<msg timestamp="20210124 01:18:10.095" level="INFO">${ATTR} = active</msg>
+<status status="PASS" starttime="20210124 01:18:10.057" endtime="20210124 01:18:10.095"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${ATTR}</arg>
+<arg>active</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:10.096" endtime="20210124 01:18:10.097"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:08.923" endtime="20210124 01:18:10.097"></status>
+</kw>
+<kw name="Click On Tabs">
+<arguments>
+<arg>${TAB_REVIEWS_LINK}</arg>
+<arg>${TAB_REVIEWS_CLASS}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://${URL}/index.php?route=product/product&amp;path=18&amp;product_id=47</arg>
+</arguments>
+<msg timestamp="20210124 01:18:10.099" level="INFO">Opening url 'http://192.168.17.4/index.php?route=product/product&amp;path=18&amp;product_id=47'</msg>
+<status status="PASS" starttime="20210124 01:18:10.099" endtime="20210124 01:18:10.898"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector1}</arg>
+</arguments>
+<msg timestamp="20210124 01:18:10.900" level="INFO">Clicking element 'xpath=//a[@href="#tab-review"]'.</msg>
+<status status="PASS" starttime="20210124 01:18:10.900" endtime="20210124 01:18:11.009"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector2}</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:11.010" endtime="20210124 01:18:11.128"></status>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>${selector2}</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${ATTR}</var>
+</assign>
+<msg timestamp="20210124 01:18:11.167" level="INFO">${ATTR} = active</msg>
+<status status="PASS" starttime="20210124 01:18:11.129" endtime="20210124 01:18:11.167"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${ATTR}</arg>
+<arg>active</arg>
+</arguments>
+<status status="PASS" starttime="20210124 01:18:11.168" endtime="20210124 01:18:11.169"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:10.098" endtime="20210124 01:18:11.170"></status>
+</kw>
+<status status="PASS" starttime="20210124 01:18:07.863" endtime="20210124 01:18:11.170" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210124 01:18:11.176" endtime="20210124 01:18:11.236"></status>
+</kw>
+<doc>Тесты для Open Cart на RobotFramework</doc>
+<status status="PASS" starttime="20210124 01:17:56.576" endtime="20210124 01:18:11.236"></status>
+</suite>
+<status status="PASS" starttime="20210124 01:17:49.541" endtime="20210124 01:18:11.261"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" id="s1-s1" name="TestApi">Tests.TestApi</stat>
+<stat pass="1" fail="0" id="s1-s2" name="TestDataBase">Tests.TestDataBase</stat>
+<stat pass="5" fail="0" id="s1-s3" name="TestOpenCart">Tests.TestOpenCart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
